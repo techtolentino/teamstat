@@ -23,7 +23,7 @@ main h1 {
 	font-size: 2em; 
 }
 
-h1, p {
+h1, p, h2 {
 	color: #848484;
 }
 
@@ -60,6 +60,14 @@ h1, p {
 	font-size: 5em;
 	color: #195DE9;
 	margin-bottom: 30px;
+}
+
+#branding {
+	font-size: 1.2em;
+	color: #195DE9;
+	margin-top: 15px;
+	font-weight: bolder;
+	font-style: italic;
 }
 
 .sorry p {
@@ -208,7 +216,7 @@ a:hover {color: #727272;}
 .nav ul {
 	list-style-type: none;
 	margin: 0 auto;
-	text-align: right;
+	text-align: center;
 	padding-left: 0;
 }
 
