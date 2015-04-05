@@ -200,7 +200,7 @@ a:hover {color: #727272;}
 .nav {
 	width: 100%;
 	border-bottom: 1px solid rgba(161, 161, 161, 0.15);
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	padding-top: 15px;
 	padding-bottom: 0;
 }
@@ -208,7 +208,7 @@ a:hover {color: #727272;}
 .nav ul {
 	list-style-type: none;
 	margin: 0 auto;
-	text-align: center;
+	text-align: right;
 	padding-left: 0;
 }
 

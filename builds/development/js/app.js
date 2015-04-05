@@ -7,8 +7,8 @@ var appControllers = angular.module('appControllers',['firebase']);
 
 myApp.config(['$routeProvider', function($routeProvider){
 	$routeProvider.
-		when('/login', {
-			templateUrl: 'views/login.html',
+		when('/home', {
+			templateUrl: 'views/home.html',
 			controller: 'RegistrationController'
 		}).
 		when('/team', {
@@ -24,6 +24,6 @@ myApp.config(['$routeProvider', function($routeProvider){
 			controller: 'RegistrationController'
 		}).
 		otherwise({
-			redirectTo: '/login'
+			redirectTo: '/home'
 		});
 }]);
