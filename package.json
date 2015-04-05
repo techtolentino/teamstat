@@ -1,10 +1,10 @@
 {
-  "name": "ScrumStat",
+  "name": "TeamStat",
   "version": "0.0.1",
-  "description": "#ScrumStatus App, inspired by Mateo Clarke",
+  "description": "#TeamStat App, inspired by Mateo Clarke",
   "repository": {
     "type": "git",
-    "url": "https://github.com/techtolentino/scrumstatus.git"
+    "url": "https://github.com/techtolentino/teamstat.git"
   },
   "author": "@makertolentino",
   "devDependencies": {
