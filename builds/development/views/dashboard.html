@@ -16,98 +16,108 @@
 		</div>
 		<div class="note-box">
 			<h3>Additional notes</h3>
-			<input 
+			<p>{{member.upcoming}}</p>
+		</div>
+	</div>
+
+	<div 
+		id="statusUpdater"
+		ng-show="statusUpdater"
+		>
+		<form name="dashColorForm"
+			id="dashColorForm"
+			novalidate>
+			<div class="radio-toolbar">
+				<input 
+					type="radio" 
+					id="radio1" 
+					name="radios"
+					ng-model="color" 
+					ng-change="colorChange(color)"
+					value="green">
+			  <label for="radio1" id="greenRadio"></label>
+
+			  <input 
+			  	type="radio" 
+			  	id="radio2" 
+			  	name="radios"
+			  	ng-model="color" 
+			  	ng-change="colorChange(color)"
+			  	value="grellow">
+			  <label for="radio2" id="grellowRadio"></label>
+
+			  <input 
+			  	type="radio" 
+			  	id="radio3" 
+			  	name="radios"
+			  	ng-model="color" 
+			  	ng-change="colorChange(color)"
+			  	value="yellow">
+			  <label for="radio3" id="yellowRadio"></label>
+
+			  <input 
+			  	type="radio" 
+			  	id="radio4" 
+			  	name="radios"
+			  	ng-model="color" 
+			  	ng-change="colorChange(color)"
+			  	value="orange">
+			  <label for="radio4" id="orangeRadio"></label>
+			  
+			  <input 
+			  	type="radio" 
+			  	id="radio5" 
+			  	name="radios"
+			  	ng-model="color" 
+			  	ng-change="colorChange(color)"
+			  	value="red">
+			  <label for="radio5" id="redRadio"></label>
+			  
+			  <input 
+			  	type="radio" 
+			  	id="radio6" 
+			  	name="radios"
+			  	ng-model="color" 
+			  	ng-change="colorChange(color)"
+			  	value="darkred">
+			  <label for="radio6" id="darkredRadio"></label>
+			  
+			  <input 
+			  	type="radio" 
+			  	id="radio7" 
+			  	name="radios"
+			  	ng-model="color" 
+			  	ng-change="colorChange(color)"
+			  	value="unavailable">
+			  <label for="radio7" id="unavailableRadio"></label>
+			  
+			</div>
+		</form>
+
+		<form name="dashProjectForm"
+			id="projectForm"
+			novalidate>
+			<div class="dashprojects">
+				<textarea 
+					name="projectDescription" 
+					id="memberproject"
+					ng-model="projectDescription"
+					ng-change="dashProjectUpdate(projectDescription)"
+					placeholder="{{member.projectDescription}}">{{member.projectDescription}}
+				</textarea>
+			</div>
+		</form>
+
+		<input 
 				type="text" 
 				id="updateUpcoming" 
 				name="upcoming"
 				placeholder="{{member.upcoming}}"
 				ng-model="upcoming" 
 				ng-change="upcomingChange(upcoming)">
-		</div>
 	</div>
 
-	<form name="dashColorForm"
-		id="dashColorForm"
-		novalidate>
-		<div class="radio-toolbar">
-			<input 
-				type="radio" 
-				id="radio1" 
-				name="radios"
-				ng-model="color" 
-				ng-change="colorChange(color)"
-				value="green">
-		  <label for="radio1" id="greenRadio"></label>
-
-		  <input 
-		  	type="radio" 
-		  	id="radio2" 
-		  	name="radios"
-		  	ng-model="color" 
-		  	ng-change="colorChange(color)"
-		  	value="grellow">
-		  <label for="radio2" id="grellowRadio"></label>
-
-		  <input 
-		  	type="radio" 
-		  	id="radio3" 
-		  	name="radios"
-		  	ng-model="color" 
-		  	ng-change="colorChange(color)"
-		  	value="yellow">
-		  <label for="radio3" id="yellowRadio"></label>
-
-		  <input 
-		  	type="radio" 
-		  	id="radio4" 
-		  	name="radios"
-		  	ng-model="color" 
-		  	ng-change="colorChange(color)"
-		  	value="orange">
-		  <label for="radio4" id="orangeRadio"></label>
-		  
-		  <input 
-		  	type="radio" 
-		  	id="radio5" 
-		  	name="radios"
-		  	ng-model="color" 
-		  	ng-change="colorChange(color)"
-		  	value="red">
-		  <label for="radio5" id="redRadio"></label>
-		  
-		  <input 
-		  	type="radio" 
-		  	id="radio6" 
-		  	name="radios"
-		  	ng-model="color" 
-		  	ng-change="colorChange(color)"
-		  	value="darkred">
-		  <label for="radio6" id="darkredRadio"></label>
-		  
-		  <input 
-		  	type="radio" 
-		  	id="radio7" 
-		  	name="radios"
-		  	ng-model="color" 
-		  	ng-change="colorChange(color)"
-		  	value="unavailable">
-		  <label for="radio7" id="unavailableRadio"></label>
-		  
-		</div>
-	</form>
-
-	<form name="dashProjectForm"
-		id="projectForm"
-		novalidate>
-		<div class="dashprojects">
-			<textarea 
-				name="projectDescription" 
-				id="memberproject"
-				ng-model="projectDescription"
-				ng-change="dashProjectUpdate(projectDescription)"
-				placeholder="{{member.projectDescription}}">{{member.projectDescription}}
-			</textarea>
-		</div>
-	</form>
-	<p><a class="btn dashsubmit" ng-href="#/team">Go Back</a></p>
+	<a class="btn dashgoback" ng-href="#/team">Go Back</a>
+	<a class="btn dashupdate" ng-href="#/team" ng-show="statusUpdater">Save</a>
+	<a class="btn dashsubmit" ahref="#" ng-click="statusUpdater = ! statusUpdater">Update</a>
 </div>

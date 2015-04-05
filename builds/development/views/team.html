@@ -10,14 +10,18 @@
 </div> -->
 
 <div>
-	<ul class="cbp-rfgrid" ng-repeat="(key,member) in members">
-		<a ng-href="#/views/dashboard/{{key}}/{{member.firstname}}">
+	<ul class="cbp-rfgrid">
+		<a 
+			ng-repeat="(key,member) in members"
+			ng-href="#/views/dashboard/{{key}}/{{member.firstname}}"
+			>
 			<li class="{{member.color}}">
 				<div class="dashImageHome">
 					<img ng-src="{{member.image}}" class="{{member.color}}Border" id="homeProfile">
 				</div>
 				<div>
 					<h3>{{member.firstname}}</h3>
+					<p id="mobileStatus">Working on: {{member.projectDescription}}</p>
 				</div>
 			</li>
 		</a>

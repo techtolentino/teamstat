@@ -33,7 +33,7 @@ h1, p {
 }
 
 .wrapper {
-	max-width: 1100px;
+	/*max-width: 1100px;*/
 	display: block;
 	margin: 0 auto;
 }
@@ -76,6 +76,8 @@ h1, p {
   top: 10px;
   right: 10px;
 }
+
+#mobileStatus {display: none;}
 
 input {
 	margin-bottom: 30px;
@@ -385,7 +387,7 @@ ______________________________*/
 
 }
 
-.status-box p {
+.status-box p, .note-box p {
 	color: #3B3B3B;
 	font-size: 14.3px
 }
@@ -399,7 +401,7 @@ ______________________________*/
 
 #frame-green {
 	border: thin solid #26C281;
-	background-color: rgba(203, 246, 214, 0.25);
+	/*background-color: rgba(203, 246, 214, 0.25);*/
 }
 
 #title-green {
@@ -409,7 +411,7 @@ ______________________________*/
 
 #frame-grellow {
 	border: thin solid #D3E93A;
-	background-color: rgba(211, 233, 58, 0.25);
+	/*background-color: rgba(211, 233, 58, 0.25);*/
 }
 
 #title-grellow {
@@ -419,7 +421,7 @@ ______________________________*/
 
 #frame-yellow {
 	border: thin solid #FDD835;
-	background-color: rgba(251, 222, 86, 0.25);
+	/*background-color: rgba(251, 222, 86, 0.25);*/
 }
 
 #title-yellow {
@@ -429,7 +431,7 @@ ______________________________*/
 
 #frame-orange {
 	border: thin solid #F9690E;
-	background-color: rgba(251, 150, 86, 0.25);
+	/*background-color: rgba(251, 150, 86, 0.25);*/
 }
 
 #title-orange {
@@ -439,7 +441,7 @@ ______________________________*/
 
 #frame-red {
 	border: thin solid #DC3023;
-	background-color: rgba(251, 100, 86, 0.25);
+	/*background-color: rgba(251, 100, 86, 0.25);*/
 }
 #title-red {
 	margin-top: 0;
@@ -448,7 +450,7 @@ ______________________________*/
 
 #frame-darkred {
 	border: thin solid #8F1D21;
-	background-color: rgba(242, 160, 152, 0.25);
+	/*background-color: rgba(242, 160, 152, 0.25);*/
 }
 #title-darkred {
 	margin-top: 0;
@@ -457,7 +459,7 @@ ______________________________*/
 
 #frame-unavailable {
 	border: thin solid #a6a6a6;
-	background-color: rgba(153, 137, 135, 0.1);
+	/*background-color: rgba(153, 137, 135, 0.1);*/
 }
 #title-unavailable {
 	margin-top: 0;
@@ -466,7 +468,7 @@ ______________________________*/
 
 #frame-plain {
 	border: thin solid #c5c5c5;
-	background-color: rgba(153, 137, 135, 0.1);
+	/*background-color: rgba(153, 137, 135, 0.1);*/
 }
 #title-plain {
 	margin-top: 0;
@@ -558,24 +560,60 @@ ______________________________*/
   font-size: 1.1em;
   padding: 10px;
   border-radius: 2px;
-  background: rgba(255, 255, 255, 0.48);
-  margin: 0;
+  background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.26);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .dashsubmit {
   margin: 0 auto;
   width: 65px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 15px;
   font-size: 1.2em;
   padding: 10px 20px 10px 20px;
-  display: block;
+  display: inline-block;
+  color: #2062E6;
+  background-color: transparent;
 }
 
 .dashsubmit:hover {
 	color: #ffffff;
 	cursor: pointer;
+}
+
+.dashgoback {
+  margin: 0 auto;
+  width: 65px;
+  margin: 15px;
+  font-size: 1.2em;
+  padding: 10px 20px 10px 20px;
+  display: inline-block;
+  color: #2062E6;
+  background-color: transparent;
+}
+
+.dashgoback:hover {
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.dashupdate {
+  margin: 0 auto;
+  width: 65px;
+  margin: 15px;
+  font-size: 1.2em;
+  padding: 10px 20px 10px 20px;
+  display: inline-block;
+  background: #24E8DF;
+  border: 1px solid #24E8DF;
+}
+
+.dashupdate:hover {
+	color: #ffffff;
+	cursor: pointer;
+	border: 1px solid #24E8DF;
+	background: #24E8DF;
 }
 
 textarea#memberproject {
@@ -677,6 +715,7 @@ ______________________________*/
 	list-style: none;
 	position: relative;
 	width: 100%;
+	margin-left: 2%;
 }
 .cbp-rfgrid li {
 	position: relative;
@@ -692,11 +731,26 @@ ______________________________*/
 	box-shadow: 4px 4px 4px #CDCDCD;
 }
 
+/*.cbp-rfgrid {
+	margin: 35px 0 0 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	width: 100%;
+}
+
+.cbp-rfgrid li {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 16.6666667%; /* Fallback */
+	width: -webkit-calc(100% / 6);
+	width: calc(100% / 6);
+}*/
+
 .profilephoto {
   background: #FFF;
   /* padding: 10px; */
-  width: 125px;
-  height: 125px;
   border-radius: 50%;
   font-size: 4em;
   margin: 0 auto;
@@ -715,6 +769,10 @@ ______________________________*/
 
 #homeProfile:hover {
 	opacity: 1;
+}
+
+img#homeProfile {
+	width: 115px;
 }
 
 .greenBorder {
@@ -866,6 +924,8 @@ ______________________________*/
 	  margin-bottom: 0;
 	  padding-bottom: 0px;
 	}
+	#mobileStatus {display: block;}
+	.cbp-rfgrid {margin-left: 0;}
 }
 
 @media all and (max-width: 321px) {
