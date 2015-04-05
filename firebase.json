@@ -1,0 +1,9 @@
+{
+  "firebase": "teamstat",
+  "public": "builds/development/",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

@@ -1,0 +1,25 @@
+<!-- <div class="sorry"
+	ng-hide="signedIn()">
+	<h1>Yikes!</h1>
+	<p>You must register or login to view the team page!</p>
+	<a class="btn"
+		ng-href="#/register"
+		id="signup-button">Sign Up</a>
+	<a type="submit" class="altbtn"
+		ng-href="#/login">Login</a>
+</div> -->
+
+<div>
+	<ul class="cbp-rfgrid" ng-repeat="(key,member) in members">
+		<a ng-href="#/views/dashboard/{{key}}/{{member.firstname}}">
+			<li class="{{member.color}}">
+				<div class="dashImageHome">
+					<img ng-src="{{member.image}}" class="{{member.color}}Border" id="homeProfile">
+				</div>
+				<div>
+					<h3>{{member.firstname}}</h3>
+				</div>
+			</li>
+		</a>
+	</ul>
+</div>
