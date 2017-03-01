@@ -1,5 +1,5 @@
 {
   "projects": {
-    "testing": "scrumcheck"
+    "default": "scrumcolor"
   }
 }
